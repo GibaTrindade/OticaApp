@@ -8,7 +8,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <%= link_to "Otks", root_path, class: "navbar-brand" %>
+      <%= link_to "Optk", root_path, class: "navbar-brand" %>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -27,10 +27,10 @@
 	  <% end %>
 	  
       <% if user_signed_in? %>
-      	
-		<li><%= link_to "Venda Atual (#{cartCount})", cart_index_path %></li>
+      	<li><%= link_to "Finalizar Venda", clients_path %></li>
+		    <li><%= link_to "Venda Atual (#{cartCount})", cart_index_path %></li>
         <li><%= link_to "Consultar Estoque", products_path %></li>
-		<li><%= link_to "Consultar Clientes", clients_path %></li>
+		    <li><%= link_to "Consultar Clientes", clients_path %></li>
         <li><%= link_to "Relatório de Vendas", orders_path %></li>
         <li><%= link_to "Sair", destroy_user_session_path, method: :delete %>
 	  <%else%>

@@ -14,7 +14,7 @@ Rails.application.routes.draw do
 
   get 'cart/index'
 
-  #constraints(SubdomainPresent) do
+  constraints(SubdomainPresent) do
     devise_for :users
     resources :products
     resources :clients
@@ -23,17 +23,19 @@ Rails.application.routes.draw do
     resources :clients
     resources :searches
 
-    #root 'products#index', as: :subdomain_root
+    root 'products#index', as: :subdomain_root
     get 'choose', to: 'orders#choose_products'
     get 'clear', to: 'cart#clear'
     get 'add/:id/:page', to: 'cart#add', as: 'add'
     get 'remove/:id', to: 'cart#remove', as: 'remove'
     get 'cart/index', to: 'cart#index', as: 'cart'
-    #end
+  end
 
-  #constraints(SubdomainBlank) do
-    resources :accounts, only: [:new, :create]
+
+  constraints(SubdomainBlank) do
     root 'pages#home'
-    #end
+    resources :accounts, only: [:new, :create]
+    get 'pages/home' => 'pages#home'
+  end
 
 end
