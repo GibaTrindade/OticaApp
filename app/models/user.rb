@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   has_many :orders
   has_many :clients, through: :orders
   has_many :products, through: :orders
+  #belongs_to :account
   
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable

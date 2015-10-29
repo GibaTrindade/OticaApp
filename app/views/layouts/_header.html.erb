@@ -33,6 +33,8 @@
 		<li><%= link_to "Consultar Clientes", clients_path %></li>
         <li><%= link_to "Relatório de Vendas", orders_path %></li>
         <li><%= link_to "Sair", destroy_user_session_path, method: :delete %>
+	  <%else%>
+	    <li><%= link_to "Entrar", new_user_session_path %></li>
       <% end %>
 
 
