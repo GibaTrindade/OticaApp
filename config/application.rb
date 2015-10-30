@@ -10,10 +10,6 @@ Bundler.require(*Rails.groups)
 module OticaApp
   class Application < Rails::Application
     #config.middleware.use 'Apartment::Elevators::Subdomain'
-<<<<<<< HEAD
-    #config.middleware.use 'Apartment::Elevators::FirstSubdomain'
-=======
->>>>>>> 2d97726f3bf64734585b9fec256805b7c7f82ddc
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

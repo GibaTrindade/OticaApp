@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 #u = User.create name: "Gilberto", email: "g.trindade@gmail.com", :encrypted_password: "12345678"
 Apartment
-Apartment::Tenant.switch('giba')
+Apartment::Tenant.switch('gibinha')
 
 Product.create brand: "RayBan", reference: "oc001", size: 30, gender: "masculino", product_type: "óculos", price: 300, cost_price: 100, stock_quantity: 30
 Product.create brand: "Armani", reference: "oc001", size: 30, gender: "masculino", product_type: "óculos", price: 300 ,cost_price: 100, stock_quantity: 30
